@@ -13,22 +13,22 @@
 #pragma mark - life cycle
 
 - (instancetype)init{
-    self = [self initWithTableViewStyle:UITableViewStylePlain];
-    return self;
-}
-
-- (instancetype)initWithTableViewStyle:(UITableViewStyle)tableViewStyle{
     self = [super init];
     if (self) {
-        self.tableViewStyle = tableViewStyle;
     }
     return self;
 }
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
+    self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
     self.tableView.tableFooterView = [[UIView alloc] init];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 #pragma mark - UITableViewDelegate
@@ -60,6 +60,13 @@
         _tableView.dataSource = self;
     }
     return _tableView;
+}
+
+- (NSMutableArray *)dataSource {
+    if (_dataSource == nil) {
+        _dataSource = [NSMutableArray array];
+    }
+    return _dataSource;
 }
 
 

@@ -9,10 +9,23 @@
 #ifndef AppMacro_h
 #define AppMacro_h
 
+//我的
+//#define AVOSAppID @"csNCVEIcAftdjxD6uRXSqpn5-gzGzoHsz"
+//#define AVOSAppKey @"2KDwNhsKgVf39RkYlyKbszv1"
+
+//琦琦
+#define AVOSAppID @"Q9Ely1TqLeyY6RS9d4NWavFG-gzGzoHsz"
+#define AVOSAppKey @"Gzf7zR2GxNJifRebXckP5TmW"
+
+// 基础背景色
+#define BaseBackgroundColor UIColorFromRGB(0xe9e9e9)
+#define NavigationBarTintColor UIColorFromRGB(0xffffff)
+#define NavigationTintColor UIColorFromRGB(0x636363)
+
 // 16进制颜色
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-#define RGBA(r,g,b,a)         [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define RGB(r,g,b)            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+#define RGBACOLOR(r,g,b,a)         [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define RGBCOLOR(r,g,b)            [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
 
 #define UINavigationBarColor  UIColorFromRGB(0x36A2F3)
 

@@ -14,8 +14,12 @@
 
 @property (strong, nonatomic) NSMutableArray *dataSource;
 
+/**
+ *  必须在init函数里面初始化才有效果
+ */
 @property (assign, nonatomic) UITableViewStyle tableViewStyle;
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section __attribute__((objc_requires_super));
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath __attribute__((objc_requires_super)) ;
 
 @end

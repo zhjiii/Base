@@ -13,4 +13,5 @@
 @property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSString *userId;
 
+@property (strong, nonatomic) NSString *avatar;
 @end

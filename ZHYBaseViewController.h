@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AppMacro.h"
+#import "NSObject+ProgressHUD.h"
 
 @interface ZHYBaseViewController : UIViewController
-
-- (void)alert:(NSString *)msg;
 
 @end

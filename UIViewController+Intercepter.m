@@ -11,14 +11,14 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-
-        [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo){
-            [self loadView:aspectInfo.instance];
-        } error:NULL];
-
-        [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
-            NSLog(@"[viewWillAppear:%@]", animated? @"YES" : @"NO");
-        } error:NULL];
+//
+//        [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo>aspectInfo){
+//            [self loadView:aspectInfo.instance];
+//        } error:NULL];
+//
+//        [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo, BOOL animated){
+//            NSLog(@"[viewWillAppear:%@]", animated? @"YES" : @"NO");
+//        } error:NULL];
     });
 }
 

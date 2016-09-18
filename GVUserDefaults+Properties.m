@@ -12,5 +12,6 @@
 
 @dynamic userName;
 @dynamic userId;
+@dynamic avatar;
 
 @end

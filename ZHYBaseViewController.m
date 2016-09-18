@@ -12,9 +12,16 @@
 
 #pragma mark - life cycle
 
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+    }
+    return self;
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorFromRGB(0xe9e9e9);
 }
 
 
@@ -25,15 +32,5 @@
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
 }
-
-#pragma mark - public methods
-
-- (void)alert:(NSString*)msg {
-    UIAlertView *alertView=[[UIAlertView alloc]
-                            initWithTitle:nil message:msg delegate:nil
-                            cancelButtonTitle:@"确定" otherButtonTitles:nil];
-    [alertView show];
-}
-
 
 @end
