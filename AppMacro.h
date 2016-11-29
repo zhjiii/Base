@@ -14,8 +14,12 @@
 //#define AVOSAppKey @"2KDwNhsKgVf39RkYlyKbszv1"
 
 //琦琦
-#define AVOSAppID @"Q9Ely1TqLeyY6RS9d4NWavFG-gzGzoHsz"
-#define AVOSAppKey @"Gzf7zR2GxNJifRebXckP5TmW"
+//#define AVOSAppID @"Q9Ely1TqLeyY6RS9d4NWavFG-gzGzoHsz"
+//#define AVOSAppKey @"Gzf7zR2GxNJifRebXckP5TmW"
+
+//臣生
+#define AVOSAppID @"hEdnUT9Jseo4bWVPLcISHjzi-gzGzoHsz"
+#define AVOSAppKey @"1YU0Ucs81U7dmdoGl9fVBHBg"
 
 // 基础背景色
 #define BaseBackgroundColor UIColorFromRGB(0xe9e9e9)

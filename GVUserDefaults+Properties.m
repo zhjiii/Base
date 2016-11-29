@@ -13,5 +13,11 @@
 @dynamic userName;
 @dynamic userId;
 @dynamic avatar;
+@dynamic userCode;
+@dynamic mobileNum;
+@dynamic title;
+@dynamic position;
+@dynamic intro;
+@dynamic popularity;
 
 @end
