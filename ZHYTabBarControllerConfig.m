@@ -32,27 +32,28 @@
 
 - (UITabBarController *)tabBarController{
     if (!_tabBarController) {
-        _tabBarController = [[UITabBarController alloc] init];
-        _tabBarController.tabBar.tintColor = [UIColor flatGreenColorDark];
+        _tabBarController = [[UITabBarController alloc] init];//1ccda6
+        _tabBarController.tabBar.tintColor = UIColorFromRGB(0xCC8D4A);
         
-        QuestionListTableViewController *vc1 = [[QuestionListTableViewController alloc] init];
+        HomePageViewCongtroller *vc1 = [[HomePageViewCongtroller alloc] init];
         ZHYBaseNavigationController *nc1 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc1];
-        nc1.tabBarItem.title = @"名医答";
+        nc1.tabBarItem.title = @"主页";
         nc1.tabBarItem.image = [UIImage imageNamed:@"tabbar_homePage"];
 
 //        MessagesTableViewController *vc2 = [[MessagesTableViewController alloc] init];
 //        ZHYBaseNavigationController *nc2 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc2];
 //        nc2.tabBarItem.title = @"消息";
 //        nc2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message"];
+        
         PdcNewsTableViewController *vc2 = [[PdcNewsTableViewController  alloc] init];
         ZHYBaseNavigationController *nc2 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc2];
         nc2.tabBarItem.title = @"文章库";
-        nc2.tabBarItem.image = [UIImage imageNamed:@"tabbar_message"];
+        nc2.tabBarItem.image = [UIImage imageNamed:@"news-tabbar"];
         
         PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
         ZHYBaseNavigationController *nc3 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc3];
         nc3.tabBarItem.title = @"患者";
-        nc3.tabBarItem.image = [UIImage imageNamed:@"tabbar_patient"];
+        nc3.tabBarItem.image = [UIImage imageNamed:@"patient-tabbar"];
 
 //        DoctorsTableViewController *vc4 = [[DoctorsTableViewController alloc] init];
 //        ZHYBaseNavigationController *nc4 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc4];
@@ -60,9 +61,9 @@
 //        nc4.tabBarItem.image = [UIImage imageNamed:@"tabbar_doctor"];
 
         
-        HomePageViewCongtroller  *vc5 = [[HomePageViewCongtroller alloc] init];
+        PersonalCenterTableViewController  *vc5 = [[PersonalCenterTableViewController alloc] init];
         ZHYBaseNavigationController *nc5 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc5];
-        nc5.tabBarItem.title = @"个人中心";
+        nc5.tabBarItem.title = @"我";
         nc5.tabBarItem.image = [UIImage imageNamed:@"tabbar_personalCenter"];
         [_tabBarController setViewControllers:@[nc1, nc2, nc3, nc5]];
 

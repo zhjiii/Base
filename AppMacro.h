@@ -33,6 +33,8 @@
 
 #define UINavigationBarColor  UIColorFromRGB(0x36A2F3)
 
+#define UIBaseColor UIColorFromRGB(0xcc8d4a)
+
 #define BoldSystemFont(size)  [UIFont boldSystemFontOfSize:size]
 #define SystemFont(size)      [UIFont systemFontOfSize:size]
 #define isIOS7                [[UIDevice currentDevice].systemVersion doubleValue]>=7.0?YES:NO
@@ -49,6 +51,20 @@
 #define FULL_WIDTH            SCREEN_WIDTH
 #define FULL_HEIGHT           (SCREEN_HEIGHT - ((SYSTEM_VERSION >= 7) ? 0 : STATUSBAR_HEIGHT))
 #define CONTENT_HEIGHT        (FULL_HEIGHT - NAVBAR_HEIGHT)
+
+
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
 
 // 获取 View 的 frame 的属性
 #define GetViewWidth(view)    view.frame.size.width

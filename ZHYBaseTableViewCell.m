@@ -72,7 +72,7 @@
         self.accessoryType = UITableViewCellAccessoryNone;
         self.textLabel.textAlignment = NSTextAlignmentCenter;
         self.textLabel.textColor = [UIColor whiteColor];
-        self.backgroundColor = RGBCOLOR(238, 78, 75);
+        self.backgroundColor = UIBaseColor;
     }
     else {
         self.textLabel.textAlignment = NSTextAlignmentLeft;

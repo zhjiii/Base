@@ -7,8 +7,9 @@
 //
 
 #import "ZHYBaseViewController.h"
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 
-@interface ZHYBaseTableViewController : ZHYBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ZHYBaseTableViewController : ZHYBaseViewController <UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
 
 @property (strong, nonatomic) UITableView *tableView;
 
@@ -21,5 +22,7 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath __attribute__((objc_requires_super)) ;
+
+- (NSString *)showEmptyDate;
 
 @end

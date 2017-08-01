@@ -62,4 +62,10 @@
  */
 @property (strong, nonatomic) NSNumber *popularity;
 
+
+/**
+ 推送的dvsToken
+ */
+@property (strong, nonatomic) NSString *dvsToken;
+
 @end
