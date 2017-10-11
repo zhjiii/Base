@@ -15,13 +15,13 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = [self class];
-        
+
         SEL originalSelector = @selector(initWithFrame:);
         SEL swizzledSelector = @selector(zhy_initWithFrame:);
-        
+
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        
+
         BOOL success = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         if (success) {
             class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
@@ -33,10 +33,11 @@
 
 #pragma mark - Method Swizzling
 
-- (UILabel *)zhy_initWithFrame:(BOOL)animated {
-    UILabel *label = [self zhy_initWithFrame:animated];
+- (UILabel *)zhy_initWithFrame:(CGRect)frame {
+    UILabel *label = [self zhy_initWithFrame:frame];
     [label setBackgroundColor:[UIColor whiteColor]];
     label.clipsToBounds = YES;
     return label;
 }
+
 @end

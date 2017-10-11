@@ -52,7 +52,7 @@
         
         PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
         ZHYBaseNavigationController *nc3 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc3];
-        nc3.tabBarItem.title = @"患者";
+        nc3.tabBarItem.title = @"粉丝";
         nc3.tabBarItem.image = [UIImage imageNamed:@"patient-tabbar"];
 
 //        DoctorsTableViewController *vc4 = [[DoctorsTableViewController alloc] init];
