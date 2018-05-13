@@ -47,7 +47,7 @@
         
         PdcNewsTableViewController *vc2 = [[PdcNewsTableViewController  alloc] init];
         ZHYBaseNavigationController *nc2 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc2];
-        nc2.tabBarItem.title = @"文章库";
+        nc2.tabBarItem.title = @"大讲堂";
         nc2.tabBarItem.image = [UIImage imageNamed:@"news-tabbar"];
         
         PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
@@ -63,7 +63,7 @@
         
         PersonalCenterTableViewController  *vc5 = [[PersonalCenterTableViewController alloc] init];
         ZHYBaseNavigationController *nc5 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc5];
-        nc5.tabBarItem.title = @"我";
+        nc5.tabBarItem.title = @"我的";
         nc5.tabBarItem.image = [UIImage imageNamed:@"tabbar_personalCenter"];
         [_tabBarController setViewControllers:@[nc1, nc2, nc3, nc5]];
 
