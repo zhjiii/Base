@@ -17,20 +17,26 @@
 
 - (instancetype)initWithTableView:(UITableView *)tableView  dataSource:(NSDictionary *)dictionary{
     self.dictionary = dictionary;
-    static NSString *cellIdentifier = @"ZHYBaseTableViewCell";
-    self = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
-
-    if (!self){
-        self = [[ZHYBaseTableViewCell alloc] initWithStyle:[self tableViewCellStyle] reuseIdentifier:cellIdentifier];
-    }
-
     NSString *detail = dictionary[kMutipleSectionDetailKey];
     NSString *subtitle = dictionary[kMutipleSectionSubtitleKey];
     NSString *title = dictionary[kMutipleSectionTitleKey];
     UIImage *image = dictionary[kMutipleSectionImageKey];
-
     NSInteger badge = [dictionary[kMutipleSectionBadgeKey] intValue];
+    UITableViewCellStyle myStyle;
+    if (detail) {
+        myStyle = UITableViewCellStyleValue1;
+    } else if (subtitle) {
+        myStyle = UITableViewCellStyleSubtitle;
+    } else {
+        myStyle = UITableViewCellStyleDefault;
+    }
+    
+    static NSString *cellIdentifier = @"ZHYBaseTableViewCell";
+    self = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+    if (!self){
+        self = [[ZHYBaseTableViewCell alloc] initWithStyle:myStyle reuseIdentifier:cellIdentifier];
+    }
 
     if (title) {
         self.textLabel.text = title;

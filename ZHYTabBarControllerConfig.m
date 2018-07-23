@@ -50,10 +50,10 @@
         nc2.tabBarItem.title = @"大讲堂";
         nc2.tabBarItem.image = [UIImage imageNamed:@"news-tabbar"];
         
-        PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
-        ZHYBaseNavigationController *nc3 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc3];
-        nc3.tabBarItem.title = @"粉丝";
-        nc3.tabBarItem.image = [UIImage imageNamed:@"patient-tabbar"];
+//        PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
+//        ZHYBaseNavigationController *nc3 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc3];
+//        nc3.tabBarItem.title = @"粉丝";
+//        nc3.tabBarItem.image = [UIImage imageNamed:@"patient-tabbar"];
 
 //        DoctorsTableViewController *vc4 = [[DoctorsTableViewController alloc] init];
 //        ZHYBaseNavigationController *nc4 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc4];
@@ -65,9 +65,9 @@
         ZHYBaseNavigationController *nc5 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc5];
         nc5.tabBarItem.title = @"我的";
         nc5.tabBarItem.image = [UIImage imageNamed:@"tabbar_personalCenter"];
-        [_tabBarController setViewControllers:@[nc1, nc2, nc3, nc5]];
+        [_tabBarController setViewControllers:@[nc1, nc2, nc5]];
 
-        [self setUpTabBarItemBadgesForControllers:@[vc3]];
+//        [self setUpTabBarItemBadgesForControllers:@[vc3]];
     }
     return _tabBarController;
 }

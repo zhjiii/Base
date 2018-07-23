@@ -19,5 +19,6 @@
 @dynamic position;
 @dynamic intro;
 @dynamic popularity;
+@dynamic QRCode;
 
 @end
