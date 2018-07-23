@@ -20,5 +20,6 @@
 @dynamic intro;
 @dynamic popularity;
 @dynamic QRCode;
+@dynamic dvsToken;
 
 @end
