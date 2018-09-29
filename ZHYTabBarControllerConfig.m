@@ -47,7 +47,7 @@
         
         PdcNewsTableViewController *vc2 = [[PdcNewsTableViewController  alloc] init];
         ZHYBaseNavigationController *nc2 = [[ZHYBaseNavigationController alloc] initWithRootViewController:vc2];
-        nc2.tabBarItem.title = @"大讲堂";
+        nc2.tabBarItem.title = @"文章库";
         nc2.tabBarItem.image = [UIImage imageNamed:@"news-tabbar"];
         
 //        PatiensTableViewController *vc3 = [[PatiensTableViewController alloc] init];
