@@ -64,7 +64,7 @@
  *  @return 返回要在背景里面显示的字符串
  */
 - (NSAttributedString *)descriptionForEmptyDataSet:(UIScrollView *)scrollView{
-    NSString *text = [self showEmptyDate];
+    NSString *text = @"暂时没有数据";
     if ([NSStringFromClass([self class]) isEqualToString:@"QuestionListTableViewController"]) {
         text = @"暂时还没有待回答问题";
     }
@@ -82,10 +82,6 @@
 
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView{
     return YES;
-}
-
-- (NSString *)showEmptyDate{
-    return @"暂时没有数据";
 }
 
 #pragma mark - get & set
